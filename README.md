@@ -48,19 +48,13 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 
 
 
-
-
-
-
-
-
 ![image](https://user-images.githubusercontent.com/36288975/163532979-a2a5cb5c-f495-442c-843e-bebb82737a35.png)
 
 
 
 ### FIGURE-03 CIRCUIT DIAGRAM
 
-
+![output](./i.png)
 
 ### PROCEDURE:
 1.	Connect the circuit as per the circuit diagram 
@@ -75,28 +69,35 @@ The easiest way to measure a resistive sensor is to connect one end to power and
 10.	Plot the graph for the output voltage vs the resistance 
 
 
-### PROGRAM 
- *your roll no 
- * your name 
- * department and year 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+### PROGRAM
+``` 
+ * your roll no :212221230015
+ * your name :chintha.nagajyothi
+ * department and year :AI&DS(2nd year)
 
-![image](https://user-images.githubusercontent.com/36288975/188804653-a3154e8e-2655-46f2-9dcd-f425dd1ba109.png)
+ int sensorvalue=A0;
+int newton;
+void setup()
+{
+  Serial.begin(9600);
+}
 
+void loop()
+{
+  sensorvalue= analogRead(A0);
+  
+  int newton=map(sensorvalue,0,466,0,10);
+  Serial.print("Raw value =");
+  Serial.println(sensorvalue);
+  Serial.print("force=");
+  Serial.println(newton);
+  delay(1000);
+  
+
+}
+
+```
+![output](./j.png)
 
 ### TABLE -02 standard deviation table 
 ### Population Standard Deviation
@@ -117,16 +118,5 @@ EX:           μ = (1+3+4+7+8) / 5 = 4.6
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-### RESULTS : Arduino uno is interfaced with FSR and output values are indicated on a graph.
+### RESULTS : 
+Arduino uno is interfaced with FSR and output values are indicated on a graph.
