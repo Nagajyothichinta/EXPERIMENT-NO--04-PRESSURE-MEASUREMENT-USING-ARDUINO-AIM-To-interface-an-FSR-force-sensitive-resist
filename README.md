@@ -97,7 +97,7 @@ void loop()
 }
 
 ```
-![output](./j.png)
+![output](./m.png)
 
 ### TABLE -02 standard deviation table 
 ### Population Standard Deviation
